@@ -5,7 +5,80 @@ body{
 
   
   h1{
-    font-size: 32px;
+    font-size: 2rem; /* 1rem = 16px -> 1em = 'm'*/
     font-weight: bold;
   }
   
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color:#0077b6
+  }
+
+  header{
+    background-color: #0077b6;
+    padding: 1rem 2rem 1rem 2rem;
+    box-shadow:  0 4px 8px  rgba(0,0,0,0.5);
+    position: sticky;  /*pode ser necessario top, left bottom ou right */
+    top: 0;
+  } 
+
+  ul{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+    nav a{
+    color:#ffffff;
+    font-weight: 700;
+    padding: .5rem 1rem;
+
+  }
+
+  header a:hover{
+    background-color: #023e8a
+  }
+
+   section a:hover{
+    background-color: #648dc4
+  }
+
+  nav h1{
+    text-align: center;
+  }
+
+  section a{
+    color:#023e8a
+  }
+
+  body {
+    text-align: center;
+  }
+
+
+  img {
+    display: block;
+    margin: auto;
+    width: 18%;
+  }
+
+  body li{
+    text-align: center;
+  }
+
+  
+  
+  section {
+    height: 20h;
+    margin: 10vh 2rem;
+    scroll-margin-top: 7rem;
+    padding: 1rem;
+    border: 1px solid #000000
+    
+  }
+  
+  p {
+      margin-bottom:1rem;
+  }
+

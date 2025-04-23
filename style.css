@@ -3,10 +3,52 @@
 /*seletor {
       propriedade: valor;
  }*/
+ @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); /* Arquivo CSS da fonte Ubuntu */
 
- body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
+ 
+ :root {
+    
+        --cor-primaria: rgb(222, 104, 102);    
+        --cor-secundaria:#ffffff;
+        --cor-fundo-pagina: #e0d497dd;
+        --cor-fundo-cartao: rgb(230, 163, 156);
+        --cor-primaria-texto: #000000;
+        --cor-secundaria-texto:#ffffff;
+        --cor-bordas: #e64545;
+        --cor-botao:#ffda55;
+        --borda-cartao: 2px solid #f132324d;
+    }
+    
+    
+    [data-theme="dark"]{
+        --cor-primaria: rgb(165, 29, 27);    
+        --cor-secundaria:#da929255;
+        --cor-fundo-pagina: #000000d5;
+        --cor-fundo-cartao: rgb(107, 48, 42);
+        --cor-primaria-texto: #ffffff;
+        --cor-secundaria-texto:#ffffff;
+        --cor-bordas: #e64545;
+        --cor-botao:#d09109;
+        --borda-cartao: 2px solid #2b0d0d4d;
+    }
+
+    [data-theme= "daltonismo"]{
+        --cor-primaria: #fafafa;
+        --cor-secundaria:#ffffff;
+    
+        --cor-fundo-pagina: #000000;
+        --cor-fundo-cartao:#000000;
+        --cor-primaria-texto: #ffffff;
+        --cor-secundaria-texto:#f9f9f9;
+        --cor-bordas: #ffffff;
+        --cor-botao:#000000;
+    }
+    
+    body {
+       font-family: 'ubunto', sans-serif;
+       background-color: var(--cor-fundo-pagina);
+       color: var(--cor-primaria-texto);
+   }
 
 nav h1 {
     text-align: center;
@@ -17,7 +59,7 @@ h1 {
     font-size: 2rem;
     /* 1rem = 16pc -> 1em = "M" */
     font-weight: bold;
-    color: #000000;
+    color: var(--cor-primaria);
    
     
 }
@@ -25,7 +67,7 @@ h1 {
 h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #0077b6
+    color: var(--cor-primaria   );
 }
 
 .sobreMim{
@@ -33,7 +75,7 @@ h2 {
  }
 
 header {
-    background-color: #0077b6;
+    background-color:var(--cor-primaria);
     padding: 1rem 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -42,7 +84,13 @@ header {
 
 }
 .imagem-escola{
-    margin-top: 1rem;
+    display: block;
+    margin: auto;
+    width: 20%;
+    display:grid;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-radius: 50%;
 }
 
 .rick-nas-neves{
@@ -52,6 +100,7 @@ header {
     display:grid;
     align-items: center;
     margin-bottom: 2rem;
+    border-radius: 50%;
 
 }
 
@@ -69,11 +118,11 @@ header {
     text-align: center;
 }
 section{
-    text-align: left;
+    text-align: center;
 }
 
 section a:hover {
-    background-color: #648dc4;
+    background-color: var(--cor-fundo-pagina);
 }
 
 header ul {
@@ -83,13 +132,13 @@ header ul {
 }
 
 header a {
-    color: #ffffff;
+    color: var(--cor-botao);
     font-weight: 700;
     padding: .5rem 1rem;
 }
 
 header a:hover {
-    background-color: #023e8a;
+    background-color: var(--cor-secundaria);
 }
 
 
@@ -123,7 +172,7 @@ body {
 }
 
 section a {
-    color: rgb(19, 19, 177);
+    color: var(--cor-secundaria);
 }
 
 form{
@@ -136,16 +185,16 @@ form{
 
 input,
 textarea {
-    border: 1px solid #ccc;
+    border: 1px var(--cor-fundo-pagina);;
     border-radius: 4px;
     padding: .25rem .75rem;
-    color: #000000;
+    color: var(--cor-primaria-texto);
     resize: none;
 }
 
 input[type="submit"] {
-    background-color: #0077b6;
-    color: #ffffff;
+    background-color: var(--cor-primaria);;
+    color: var(--cor-botao);
     padding: .25rem .75rem;
     border: none;
     font-weight: 700;
@@ -158,16 +207,30 @@ input[type="submit"] {
     padding: 2rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
     list-style: none;
+    background-color: var(--cor-fundo-cartao);
+    border: var(--borda-cartao);
+    align-items: center;
 }
+
+.card li{
+    margin-bottom: 0,5rem;
+}
+
 
 .titulo-card{
     font-weight:bold;
-    color: #0077b6;
+    color: var(--cor-primaria);
     font-size: 1.3rem;
+    
 }
 .instituicao-card{
     font-size: 1.1rem;
-    color: #555;
+    color: var(--cor-secundaria-texto );
+}
+
+.imagem-projeto img{
+    width: 100%;
+    border-radius: 8px;
 }
 
 .cards-em-coluna{
@@ -176,9 +239,21 @@ input[type="submit"] {
     gap: 1rem
 }
 
+.descricao-card{
+    margin-top:0.5rem;
+    font-size:0.95rem;
+    color: var(--cor-primaria-texto)
+}
+
+
+#meusProjetos .card{
+    width:30%
+}
+
  .descricao-card{
     font-size: 1.1rem;
     color: #555;
+    
 } 
 
 .cards-em-linha{
@@ -186,4 +261,57 @@ input[type="submit"] {
     flex-direction: row;
     gap: 1rem;
     flex-wrap: wrap;
+}
+
+.botao{
+    padding:0.5 rem 1rem;
+    border: none;
+    border-radius:4px;
+    margin:0.3rem 0.3rem 0 0;
+    font-weight: bold;
+
+}
+
+.botao:houver {
+    background-color: var(--cor-primaria-texto);
+    color:var(--cor-primaria-texto);
+ 
+}
+
+.botao-demo,
+.botao-continue{
+    background-color: var(--cor-primaria);
+    color:var(--cor-primaria-texto)
+}
+
+.botao-compartilhar:hover{
+    background-color: var(--cor-secundaria-texto);
+}
+
+.artigos header{
+    background-color: var(--cor-fundo-cartao);
+    box-shadow: none;
+    position: initial;
+}
+.artigos{
+    justify-content:space-evenly
+}
+.artigos article{
+    display:flex;
+    flex-direction: column;
+    padding:1rem;
+    border-left:5px solid var(--cor-primaria);
+    margin-bottom: 1rem;
+    border-radius:8 px;
+    text-align: center;
+    
+}
+.artigos h3 {
+    display:flex;
+    flex-direction: column;
+    width: 30%;
+    padding:1rem;
+    border-left:5px solid var (--cor-primaria);
+    margin-bottom: 1rem;
+    border-radius:8 px
 }

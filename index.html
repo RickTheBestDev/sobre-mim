@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
 
 <head>
     <!--Meta informações sobre a página-->
@@ -15,18 +15,12 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- CSS interno(tag style)-->
-    <style>
-        /*seletor{
-                propiedade: valor;
-            }*/
-        body {
-            background-color: #0000ff;
-        }
-    </style>
+    
+   
 </head>
 <!-- HTML NÃO TEM PESCOÇO!!!!!!!!!!-->
 
-<body style="background-color: #ffffff;">
+<body>
 
     <header>
         <nav>
@@ -39,6 +33,8 @@
                 <li><a href="#meusProjetos">Meus projetos</a></li>
                 <li><a href="#">Meus artigos</a></li>
                 <li><a href="#contato">Ultima sessão</a></li>
+                <li><span id="botao-tema">💡</span></li>
+                <li><span id="botao-visual">👁️</span></li>
             </ul>
         </nav>
     </header>
@@ -197,6 +193,7 @@
 
     <section id="meusProjetos">
         <h2 class="titulo-secao">Meus projetos</h2>
+
         <img class="imagem-projeto" src="Jogo.png" alt="Jogo que eu criei!" title="Jogo espacial criado por mim." width="500">
         <ul class="card">
 
@@ -204,12 +201,89 @@
             
             <li class="icone-card">Desenvolvi um jogo interativo usando HTML, CSS e JavaScript,
                 com o objetivo de pousar uma nave sem destruí-la.
-                 Acesse o link e jogue!!! <a href=https://rickthebestdev.github.io/lopal-moonlander/ target="_blank">Teste Meu Jogo</a></li>
+                 Acesse o link e jogue!!! <a href=https://rickthebestdev.github.io/lopal-moonlander/ 
+                 target="_blank">Teste Meu Jogo</a>
+            </li>
 
-  </ul> 
+        </ul> 
        
 
     </section>
+
+    <section id="meusArtigos">
+
+        <h2 class="titulo-secao">Meus Artigos</h2>
+
+        <div class="artigos cards-em-coluna">
+
+            <article class="card">
+
+                <header>
+
+                    <h3 class="card-titulo">Potfólio profissional usando GitHub Pages</h3> 
+                    <span class="data-publicacao">15 abr 2025</span>
+                    <span class="autor">Henrique Smocovitz</span>
+               </header>
+
+               <p>Crie e publique seu portfólio profissional usando GitHub Pages, uma maneiora facil e gratuita de mostrar seus projetos e habilidades.</p>
+    
+               <footer>
+
+
+                <button type="button" class="botao botao-continue">Continue lendo</button>
+                <button type="button" class="botao botao-compartilhar">Compartilhar</button>
+
+               </footer>
+
+            </article>
+
+            <article class="card">
+
+                <header>
+
+                    <h3 class="card-titulo">Criar jogos em Html</h3> 
+                    <span class="data-publicacao">15 abr 2025</span>
+                    <span class="autor">Henrique Smocovitz</span>
+               </header>
+
+               <p>Crie e publique seu jogo usando GitHub Pages e vscode, uma maneiora facil e gratuita de mostrar seus projetos e habilidades.</p>
+    
+               <footer>
+
+
+                <button type="button" class="botao botao-continue">Continue lendo</button>
+                <button type="button" class="botao botao-compartilhar">Compartilhar</button>
+
+               </footer>
+
+            </article>
+
+            <article class="card">
+
+                <header>
+
+                    <h3 class="card-titulo">Potfólio profissional usando GitHub Pages</h3> 
+                    <span class="data-publicacao">15 abr 2025</span>
+                    <span class="autor">henrique Smocovitz</span>
+               </header>
+
+               <p>Crie e publique seu portfólio profissional usando GitHub Pages, uma maneiora facil e gratuita de mostrar seus projetos e habilidades.</p>
+    
+               <footer>
+
+
+                <button type="button" class="botao botao-continue">Continue lendo</button>
+                <button type="button" class="botao botao-compartilhar">Compartilhar</button>
+
+               </footer>
+
+            </article>
+
+
+
+        </div>
+    </section>
+
 
     <section id="contato">
         <h2>Entre em contato comigo</h2>
@@ -226,6 +300,32 @@
         <p>Links úteis</p>
         <p>Copyright</p>
     </footer>
+
+    <script>
+        document.querySelector("#botao-tema").addEventListener("click",trocaTema);
+
+        function trocaTema(){
+            const root = document.documentElement;
+            if (root.getAttribute("data-theme")==="dark"){
+                root.removeAttribute("data-theme");
+            }else{
+                root.setAttribute("data-theme", "dark")
+            }
+        }
+    </script>
+
+<script>
+    document.querySelector("#botao-visual").addEventListener("click",visual);
+
+    function visual(){
+        const root = document.documentElement;
+        if (root.getAttribute("data-theme")==="daltonismo"){
+            root.removeAttribute("data-theme");
+        }else{
+            root.setAttribute("data-theme", "daltonismo")
+        }
+    }
+</script>
 
 </body>
 </hatml>
